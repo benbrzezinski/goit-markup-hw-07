@@ -362,7 +362,7 @@ h1 {
   cursor: pointer;
 }
 
-.project__border {
+.project__case {
   border-left: 1px solid #eee;
   border-right: 1px solid #eee;
   border-bottom: 1px solid #eee;
@@ -426,7 +426,7 @@ header {
   margin-right: 93px;
 }
 
-.main-nav__link {
+.nav__link {
   color: var(--main-text-color);
   font-weight: 500;
   font-size: 14px;
@@ -436,16 +436,16 @@ header {
   transition: color var(--transition-duration) var(--cubic-bezier);
 }
 
-.main-nav__link:hover,
-.main-nav__link:focus {
+.nav__link:hover,
+.nav__link:focus {
   color: var(--main-selection-color);
 }
 
-.main-nav__link--underline {
+.nav__link--underline {
   color: var(--main-selection-color);
 }
 
-.main-nav__link--underline::after {
+.nav__link--underline::after {
   cursor: auto;
   content: "";
   position: absolute;
@@ -457,11 +457,11 @@ header {
   bottom: -1px;
 }
 
-.main-nav__link--after {
+.nav__link--after {
   color: var(--main-selection-color);
 }
 
-.main-nav__link--after::after {
+.nav__link--after::after {
   cursor: auto;
   content: "";
   position: absolute;
@@ -473,12 +473,12 @@ header {
   bottom: -1px;
 }
 
-.main-nav__item {
+.nav__item {
   padding: 32px 0;
   position: relative;
 }
 
-.main-nav {
+.nav {
   display: flex;
   gap: 46px;
   margin-right: 345px;
