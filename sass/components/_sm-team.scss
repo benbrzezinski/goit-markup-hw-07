@@ -1,0 +1,31 @@
+.sm-team {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding-inline: 32px;
+  margin-bottom: 30px;
+}
+
+.sm-team__item {
+  width: 44px;
+  height: 44px;
+  background-color: var(--main-background-color);
+  border-radius: 50%;
+  padding: 12px;
+  transition: background-color var(--transition-duration) var(--cubic-bezier);
+
+  &:hover,
+  &:focus {
+    background-color: var(--main-selection-color);
+    cursor: pointer;
+
+    .sm-team__icon {
+      fill: var(--main-background-color);
+    }
+  }
+}
+
+.sm-team__icon {
+  fill: var(--main-icons-color);
+  transition: fill var(--transition-duration) var(--cubic-bezier);
+}

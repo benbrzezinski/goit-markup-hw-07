@@ -80,13 +80,13 @@ h1 {
   margin: 0 250px;
 }
 
-.h1-btn {
+.h1-box__btn-case {
   display: flex;
   justify-content: center;
   margin-top: 30px;
 }
 
-.h1-btn .btn {
+.h1-box__btn {
   padding: 10px 41px 10px 42px;
 }
 
@@ -308,6 +308,7 @@ h1 {
 .buttons {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 8px;
   margin-top: 94px;
   margin-bottom: 50px;
@@ -635,12 +636,12 @@ footer {
   letter-spacing: 0.03em;
 }
 
-.btn--setup {
+.newsletter__btn {
   padding: 10px 76px 10px 42px;
   position: relative;
 }
 
-.btn__icon-send {
+.newsletter__icon-send {
   --icon-send: currentColor;
   position: absolute;
   top: 13px;
@@ -828,11 +829,11 @@ footer {
   transition: opacity 75ms ease-in;
 }
 
-.form__btn {
+.form__btn-case {
   display: flex;
   justify-content: center;
 }
 
-.form__btn .btn {
+.form__btn {
   padding: 10px 76px;
 }

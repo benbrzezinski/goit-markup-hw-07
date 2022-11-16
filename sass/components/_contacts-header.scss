@@ -1,0 +1,30 @@
+.contacts-header {
+  display: flex;
+  align-items: flex-end;
+  gap: 30px;
+}
+
+.contacts-header__link {
+  color: var(--secondary-text-color);
+  font-weight: 500;
+  font-size: var(--main-font-size);
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  transition: color var(--transition-duration) var(--cubic-bezier);
+
+  &:hover,
+  &:focus {
+    color: var(--main-selection-color);
+  }
+}
+
+.contacts-header__icon {
+  --icon-envelope-smartphone: currentColor;
+  transform: translateY(1px);
+  margin-right: 6px;
+
+  &--setup {
+    transform: translateY(3px);
+  }
+}

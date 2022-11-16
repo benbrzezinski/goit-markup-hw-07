@@ -1,0 +1,33 @@
+.strengths {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding-inline: 15px;
+}
+
+.strengths__item {
+  width: 270px;
+}
+
+.strengths__header {
+  font-size: var(--main-font-size);
+  line-height: 1.14;
+  letter-spacing: var(--main-letter-spacing);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.strengths__text {
+  color: var(--secondary-text-color);
+  font-size: var(--main-font-size);
+  line-height: 1.71;
+  letter-spacing: var(--main-letter-spacing);
+}
+
+.strengths__icon {
+  height: 120px;
+  background-color: var(--secondary-background-color);
+  border-radius: 4px;
+  margin-bottom: 30px;
+  padding: 25px 100px;
+}
