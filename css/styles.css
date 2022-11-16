@@ -143,10 +143,6 @@ h1 {
   flex-wrap: wrap;
 }
 
-.services__img {
-  display: block;
-}
-
 .services__item {
   position: relative;
 }
@@ -662,7 +658,7 @@ footer {
     visibility var(--transition-duration) var(--cubic-bezier);
 }
 
-.backdrop--is-hidden {
+.is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;

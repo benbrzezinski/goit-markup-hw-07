@@ -24,19 +24,23 @@
   }
 }
 
+%underlined {
+  content: "";
+  position: absolute;
+  width: 53px;
+  height: 4px;
+  background-color: var(--main-selection-color);
+  border-radius: 2px;
+  left: 0;
+  bottom: -1px;
+  cursor: auto;
+}
+
 .nav__link--underline {
   color: var(--main-selection-color);
 
   &::after {
-    cursor: auto;
-    content: "";
-    position: absolute;
-    width: 53px;
-    height: 4px;
-    background-color: var(--main-selection-color);
-    border-radius: 2px;
-    left: 0;
-    bottom: -1px;
+    @extend %underlined;
   }
 }
 
@@ -44,7 +48,7 @@
   @extend .nav__link--underline;
 
   &::after {
-    @extend .nav__link--underline::after;
+    @extend %underlined;
     width: 58px;
   }
 }
