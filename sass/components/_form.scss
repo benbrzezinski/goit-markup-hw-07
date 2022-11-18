@@ -1,0 +1,89 @@
+@use "../utils" as *;
+$rgbaForm: rgba(33, 33, 33, 0.2);
+$letterSpacingForm: 0.01em;
+
+.form {
+  padding: 40px;
+}
+
+.form__header {
+  color: var(--main-text-color);
+  font-size: 20px;
+  letter-spacing: var(--main-letter-spacing);
+  text-align: var(--text-center);
+  margin-bottom: 12px;
+}
+
+.form__label {
+  @include label;
+}
+
+.form__text {
+  color: var(--secondary-text-color);
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: $letterSpacingForm;
+  margin-bottom: 4px;
+}
+
+.form__icon {
+  fill: var(--main-text-color);
+  position: absolute;
+  top: 29px;
+  left: 12px;
+  transition: fill var(--transition-duration) var(--cubic-bezier);
+}
+
+.form__box:focus-within {
+  .form__icon {
+    fill: var(--main-selection-color);
+  }
+}
+
+.form__input {
+  width: 100%;
+  @include bordered($rgbaForm);
+  border-radius: var(--main-border-radius);
+  outline: none;
+  transition: border-color var(--transition-duration) var(--cubic-bezier);
+  padding-block: 10px;
+  padding-left: 41px;
+  margin-bottom: 10px;
+
+  &:focus {
+    border-color: var(--main-selection-color);
+  }
+}
+
+.form__comment {
+  width: 100%;
+  @include bordered($rgbaForm);
+  border-radius: var(--main-border-radius);
+  resize: none;
+  outline: none;
+  transition: border-color var(--transition-duration) var(--cubic-bezier);
+  padding: 12px 16px;
+  margin-bottom: 15px;
+
+  &:focus {
+    border-color: var(--main-selection-color);
+  }
+
+  &::placeholder {
+    color: var(--secondary-text-color);
+    opacity: 0.5;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: $letterSpacingForm;
+  }
+}
+
+.form__btn-case {
+  display: flex;
+  justify-content: center;
+}
+
+.form__btn {
+  @include btn;
+  padding: 10px 76px;
+}
