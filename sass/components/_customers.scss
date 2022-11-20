@@ -4,7 +4,7 @@
   @include flex;
 }
 
-.customers__item {
+.customers__link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,7 +17,6 @@
   &:hover,
   &:focus {
     border-color: var(--main-selection-color);
-    cursor: var(--pointer);
 
     .customers__icon {
       fill: var(--main-selection-color);

@@ -22,6 +22,21 @@
   margin-top: 50px;
 }
 
+@mixin sm($backgroundColor) {
+  width: 44px;
+  height: 44px;
+  background-color: $backgroundColor;
+  border-radius: 50%;
+  display: block;
+  padding: 12px;
+  transition: background-color var(--transition-duration) var(--cubic-bezier);
+
+  &:hover,
+  &:focus {
+    background-color: var(--main-selection-color);
+  }
+}
+
 @mixin label {
   display: flex;
   align-items: center;

@@ -25,4 +25,16 @@
   align-items: center;
   cursor: var(--pointer);
   padding: 0;
+
+  &:hover,
+  &:focus {
+    .modal__icon {
+      fill: var(--main-selection-color);
+    }
+  }
+}
+
+.modal__icon {
+  fill: #000;
+  transition: fill var(--transition-duration) var(--cubic-bezier);
 }

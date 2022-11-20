@@ -1,3 +1,5 @@
+@use "../utils" as *;
+
 .sm-team {
   display: flex;
   justify-content: center;
@@ -6,19 +8,11 @@
   margin-bottom: 30px;
 }
 
-.sm-team__item {
-  width: 44px;
-  height: 44px;
-  background-color: var(--main-background-color);
-  border-radius: 50%;
-  padding: 12px;
-  transition: background-color var(--transition-duration) var(--cubic-bezier);
+.sm-team__link {
+  @include sm(var(--main-background-color));
 
   &:hover,
   &:focus {
-    background-color: var(--main-selection-color);
-    cursor: var(--pointer);
-
     .sm-team__icon {
       fill: var(--main-background-color);
     }

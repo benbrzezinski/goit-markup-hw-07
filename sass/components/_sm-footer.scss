@@ -1,3 +1,5 @@
+@use "../utils" as *;
+
 .sm-footer-box {
   padding-top: 11px;
 }
@@ -18,19 +20,8 @@
   gap: 10px;
 }
 
-.sm-footer__item {
-  width: 44px;
-  height: 44px;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
-  padding: 12px;
-  transition: background-color var(--transition-duration) var(--cubic-bezier);
-
-  &:hover,
-  &:focus {
-    background-color: var(--main-selection-color);
-    cursor: var(--pointer);
-  }
+.sm-footer__link {
+  @include sm(rgba(255, 255, 255, 0.1));
 }
 
 .sm-footer__icon {

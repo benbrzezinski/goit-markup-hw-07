@@ -23,6 +23,7 @@ $letterSpacingForm: 0.01em;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: $letterSpacingForm;
+  transition: color var(--transition-duration) var(--cubic-bezier);
   margin-bottom: 4px;
 }
 
@@ -37,6 +38,10 @@ $letterSpacingForm: 0.01em;
 .form__box:focus-within {
   .form__icon {
     fill: var(--main-selection-color);
+  }
+
+  .form__text {
+    color: var(--main-selection-color);
   }
 }
 
