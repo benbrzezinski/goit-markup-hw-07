@@ -1,5 +1,4 @@
 @use "../utils" as *;
-$rgbaForm: rgba(33, 33, 33, 0.2);
 $letterSpacingForm: 0.01em;
 
 .form {
@@ -23,7 +22,6 @@ $letterSpacingForm: 0.01em;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: $letterSpacingForm;
-  transition: color var(--transition-duration) var(--cubic-bezier);
   margin-bottom: 4px;
 }
 
@@ -39,40 +37,32 @@ $letterSpacingForm: 0.01em;
   .form__icon {
     fill: var(--main-selection-color);
   }
+}
 
-  .form__text {
-    color: var(--main-selection-color);
+%outlined {
+  width: 100%;
+  @include bordered(rgba(33, 33, 33, 0.2));
+  border-radius: var(--main-border-radius);
+  outline: none;
+  transition: border-color var(--transition-duration) var(--cubic-bezier);
+
+  &:focus {
+    border-color: var(--main-selection-color);
   }
 }
 
 .form__input {
-  width: 100%;
-  @include bordered($rgbaForm);
-  border-radius: var(--main-border-radius);
-  outline: none;
-  transition: border-color var(--transition-duration) var(--cubic-bezier);
+  @extend %outlined;
   padding-block: 10px;
   padding-left: 41px;
   margin-bottom: 10px;
-
-  &:focus {
-    border-color: var(--main-selection-color);
-  }
 }
 
 .form__comment {
-  width: 100%;
-  @include bordered($rgbaForm);
-  border-radius: var(--main-border-radius);
+  @extend %outlined;
   resize: none;
-  outline: none;
-  transition: border-color var(--transition-duration) var(--cubic-bezier);
   padding: 12px 16px;
   margin-bottom: 15px;
-
-  &:focus {
-    border-color: var(--main-selection-color);
-  }
 
   &::placeholder {
     color: var(--secondary-text-color);
